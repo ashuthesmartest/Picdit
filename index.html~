@@ -33,6 +33,7 @@
 
     <!-- Style -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/ui-lightness/jquery-ui-1.10.1.custom.min.css" rel="stylesheet" media="screen">
 
     <!-- Responsive CSS -->
     <link href="css/responsive.css" rel="stylesheet">
@@ -79,17 +80,13 @@
 	            </nav> 
 
 	            <div class="container">
-	                <div class="row">
-	                    <div class="col-md-12 text-center">
-	                        <div class="home_text wow fadeInUp animated"> 
-<div id = "imageDrop">Drag & Drop an image file here.</div>
+<div class="container">
+    <div class="row">
+      <div class="span8">
+        <div id = "imageDrop">Drag & Drop an image file here.</div>
         <canvas id ="imageCanvas"></canvas>
       </div>
-	                        </div>
-	                    </div>
-	                </div>
-	            </div>
-<div class="container">
+      <div class="span4">
         <fieldset>
           <legend>Choose a filter:</legend>
 
@@ -153,7 +150,11 @@
 
         </fieldset>
       </div>
-
+    </div>
+  </div>
+	                </div>
+	            </div>
+		</div>
 	            <div class="container">
 	                <div class="row">
 	                    <div class="col-md-12 text-center">
@@ -203,16 +204,6 @@
     </div>
 </footer>
 
-
-
-
-
-
-
-
-
-
-
 <!-- =========================
      SCRIPTS 
 ============================== -->
@@ -225,11 +216,13 @@
     <script src="js/wow.js"></script>
     <script src="js/script.js"></script>
     <script src="js/libraries/jquery-ui-1.10.1.custom.min.js"></ script>
+    <script src="js/libraries/jquery-1.9.1.js"></script>
     <script src="js/libraries/yepnope.1.5.4-min.js"></script>
     <script src="js/libraries/mustache.js"></script>
     <script src="js/filters/filterutils.js"></script>
     <script src="js/shutterama.js"></script>
-<script type="text/mustache" id="template_properties">
+
+  <script type="text/mustache" id="template_properties">
   <div class="control-group filter-property">
   <label class="control-label" for="filter-property-{{name}}">{{label}}</label>
   <div class="controls">
